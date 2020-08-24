@@ -9,9 +9,12 @@
 <body>
     <form action="/update/<%=item.id %>?_method=PUT" method="POST">
     
-        <input type="text" name='type' value="<%= item.type %>">
-        <input type="text" name='setup' value="<%= item.setup %>">
-        <input type="text" name='punchline' value="<%= item.punchline %>">
+      type  <input type="text" name='type' value="<%= item.type %>">
+      <br>
+     setup   <input type="text" name='setup' value="<%= item.setup %>">
+     <br>
+     punchline   <input type="text" name='punchline' value="<%= item.punchline %>">
+     <br>
     <button type="submit">Update My Jokes</button>  
     </form>
 </body>
