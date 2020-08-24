@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('layout/head') %>
+</head>
+<body>
+    <div>
+        <h2> <%= item.id %></h2>
+        <h2> <%= item.type %></h2>
+        <h2> <%= item.setup %></h2>
+        <h2> <%= item.punchline %></h2>
+        <form action="/delete/<%= item.id %>?_method=DELETE" method="POST">
+            <button>Delete Joke</button>
+        </form>
+        <a href="/update/<%= item.id %>"><button>update Joke</button> </a>
+        
+    </div>
+</body>
+</html>

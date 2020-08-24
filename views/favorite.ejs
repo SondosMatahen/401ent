@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('layout/head') %>
+</head>
+<body>
+    Favorite
+
+    <% if( jokes.length ==0 ) { %>
+    <p>There is No Favorite</p>
+    <% } else{ %>
+    <div>
+        <% jokes.forEach(item=>{ %>
+            <div>
+                <h2> <%= item.id %></h2>
+                <h2> <%= item.type %></h2>
+                <h2> <%= item.setup %></h2>
+                <h2> <%= item.punchline %></h2>
+            </div>
+            <br>
+            <a href="/view/<%= item.id %>"> <button type="submit">View Details</button> </a>
+            
+
+      <%  }) %>
+    </div>
+    <% } %>
+    
+</body>
+</html>
