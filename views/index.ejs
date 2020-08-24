@@ -7,14 +7,14 @@
     <%- include('layout/head') %>
 </head>
 <body>
-    Home page
-    <div>
+  <h1>Home page</h1>  
+    <div class='fir'>
         <% result.forEach(item=>{ %>
-<div>
-    <%= item.number %>
-    <h2> <%= item.type %></h2>
-    <h2> <%= item.setup %></h2>
-    <h2> <%= item.punchline %></h2>
+<div class='sec'>
+   number: <%= item.number %>
+    <h2>type: <%= item.type %></h2>
+    <h4>setup: <%= item.setup %></h4>
+    <h4> punchline:<%= item.punchline %></h4>
     <form action="/add" method="POST">
         <input type="hidden" name='number' value="<%= item.number %>">
         <input type="hidden" name='type' value="<%= item.type %>">
@@ -23,8 +23,7 @@
     <button type="submit">Add To My Jokes</button>
 
     </form>
-
-    
+<br>
 </div>
       <%  })  %>
     </div>

@@ -7,22 +7,23 @@
     <%- include('layout/head') %>
 </head>
 <body>
-    Favorite
+    <h1>    Favorite
+        page</h1>  
 
     <% if( jokes.length ==0 ) { %>
     <p>There is No Favorite</p>
     <% } else{ %>
-    <div>
+    <div class='fir'>
         <% jokes.forEach(item=>{ %>
-            <div>
-                <h2> <%= item.id %></h2>
-                <h2> <%= item.type %></h2>
-                <h2> <%= item.setup %></h2>
-                <h2> <%= item.punchline %></h2>
-            </div>
+            <div class='sec'>
+                <h2> id: <%= item.id %></h2>
+                <h2>type: <%= item.type %></h2>
+                <h4> setup <%= item.setup %></h4>
+                <h4> punchline:<%= item.punchline %></h4>
+          
             <br>
             <a href="/view/<%= item.id %>"> <button type="submit">View Details</button> </a>
-            
+        </div>
 
       <%  }) %>
     </div>
